@@ -64,11 +64,14 @@ LOCAL_CFLAGS += $(common_CFLAGS)
 
 LOCAL_COPY_HEADERS_TO := libcurl/curl
 LOCAL_COPY_HEADERS := $(addprefix include/curl/,$(CURL_HEADERS))
-#LOCAL_SHARED_LIBRARIES := libz
+
+LOCAL_SHARED_LIBRARIES := libz libssl libcrypto
 
 LOCAL_MODULE:= libcurl
 
-#include $(BUILD_STATIC_LIBRARY)
+LOCAL_MODULE_TAGS := optional
+
+include $(BUILD_SHARED_LIBRARY)
 
 
 #########################
@@ -94,5 +97,7 @@ LOCAL_SHARED_LIBRARIES := libz libssl libcrypto
 # a dynamic library
 LOCAL_CFLAGS += $(common_CFLAGS)
 
-#include $(BUILD_EXECUTABLE)
+LOCAL_MODULE_TAGS := optional
+
+include $(BUILD_EXECUTABLE)
 
