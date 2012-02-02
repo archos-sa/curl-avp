@@ -71,7 +71,7 @@ LOCAL_MODULE:= libcurl
 
 LOCAL_MODULE_TAGS := optional
 
-include $(BUILD_SHARED_LIBRARY)
+include $(BUILD_STATIC_LIBRARY)
 
 
 #########################
