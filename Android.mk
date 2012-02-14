@@ -82,7 +82,6 @@ include $(LOCAL_PATH)/src/Makefile.inc
 LOCAL_SRC_FILES := $(addprefix src/,$(CURL_SOURCES))
 
 LOCAL_MODULE := curl
-LOCAL_STATIC_LIBRARIES := libcurl
 LOCAL_SYSTEM_SHARED_LIBRARIES := libc
 
 LOCAL_C_INCLUDES := \
@@ -91,7 +90,7 @@ LOCAL_C_INCLUDES := \
     external/openssl/include \
     external/zlib
 
-LOCAL_SHARED_LIBRARIES := libz libssl libcrypto
+LOCAL_SHARED_LIBRARIES := libcurl libz libssl libcrypto
 
 # This will also need to include $(CURLX_ONES) in order to correctly build
 # a dynamic library
