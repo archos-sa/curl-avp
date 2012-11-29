@@ -57,7 +57,7 @@ CURL_HEADERS := \
 LOCAL_SRC_FILES := $(addprefix lib/,$(CSOURCES))
 LOCAL_C_INCLUDES := \
     $(LOCAL_PATH)/include \
-    $(ANDROID_INCLUDES_COMMON)
+    $(ANDROID_INCLUDES)
 
 LOCAL_CFLAGS += $(common_CFLAGS)
 
