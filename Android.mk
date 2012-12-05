@@ -81,7 +81,11 @@ include $(CLEAR_VARS)
 include $(LOCAL_PATH)/src/Makefile.inc
 LOCAL_SRC_FILES := $(addprefix src/,$(CURL_SOURCES))
 
+ifeq ($(TARGET_ARCH_ABI),armeabi-v7a)
 LOCAL_MODULE := curl
+else
+LOCAL_MODULE := curl_no_neon
+endif
 LOCAL_SYSTEM_SHARED_LIBRARIES := libc
 
 LOCAL_C_INCLUDES := \
