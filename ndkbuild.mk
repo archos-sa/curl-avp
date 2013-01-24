@@ -60,6 +60,9 @@ LOCAL_C_INCLUDES := \
     $(ANDROID_INCLUDES)
 
 LOCAL_CFLAGS += $(common_CFLAGS)
+ifeq ($(TARGET_ARCH_ABI),x86)
+LOCAL_CFLAGS += -DBIONIC_NOSIGSETJMP # android ndk x86 bionic don't have sigsetjmp
+endif
 
 LOCAL_COPY_HEADERS_TO := libcurl/curl
 LOCAL_COPY_HEADERS := $(addprefix include/curl/,$(CURL_HEADERS))
