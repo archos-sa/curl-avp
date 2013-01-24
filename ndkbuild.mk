@@ -68,10 +68,10 @@ LOCAL_SHARED_LIBRARIES := libssl libcrypto
 
 LOCAL_LDLIBS := -L$(TARGET_OUT) -lz -lssl -lcrypto
 
-ifeq ($(TARGET_ARCH_ABI),armeabi-v7a)
-LOCAL_MODULE := curl
-else
+ifeq ($(TARGET_ARCH_ABI),armeabi)
 LOCAL_MODULE := curl_no_neon
+else
+LOCAL_MODULE := curl
 endif
 
 LOCAL_MODULE_TAGS := optional
