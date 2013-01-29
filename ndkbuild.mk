@@ -79,5 +79,5 @@ endif
 
 LOCAL_MODULE_TAGS := optional
 
-include $(NDK_ROOT)/../android-libs/ndkbuild.mk
+include $(BUILD_ANDROID_LIBS)
 include $(BUILD_SHARED_LIBRARY)
