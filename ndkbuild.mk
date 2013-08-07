@@ -57,7 +57,8 @@ CURL_HEADERS := \
 LOCAL_SRC_FILES := $(addprefix lib/,$(CSOURCES))
 LOCAL_C_INCLUDES := \
     $(LOCAL_PATH)/include \
-    $(ANDROID_INCLUDES)
+    $(EXTERNAL_DIR)/openssl/include \
+    $(EXTERNAL_DIR)/zlib
 
 LOCAL_CFLAGS += $(common_CFLAGS)
 ifeq ($(TARGET_ARCH_ABI),x86)
