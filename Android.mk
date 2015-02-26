@@ -35,6 +35,12 @@
 
 LOCAL_PATH:= $(call my-dir)
 
+#!!!!!!!!!!!!!!!!!
+#!!!!!!!!!!!!!!!!!
+#!!!!!!!!!!!!!!!!!
+#This file is not used for standard avos build
+#Check ndkbuild.mk if you want to change settings from avos
+
 common_CFLAGS := -Wpointer-arith -Wwrite-strings -Wunused -Winline -Wnested-externs -Wmissing-declarations -Wmissing-prototypes -Wno-long-long -Wfloat-equal -Wno-multichar -Wsign-compare -Wno-format-nonliteral -Wendif-labels -Wstrict-prototypes -Wdeclaration-after-statement -Wno-system-headers -DHAVE_CONFIG_H
 
 #########################
@@ -42,6 +48,7 @@ common_CFLAGS := -Wpointer-arith -Wwrite-strings -Wunused -Winline -Wnested-exte
 
 include $(CLEAR_VARS)
 include $(LOCAL_PATH)/lib/Makefile.inc
+
 CURL_HEADERS := \
 	curlbuild.h \
 	curl.h \

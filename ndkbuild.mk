@@ -70,7 +70,7 @@ LOCAL_COPY_HEADERS := $(addprefix include/curl/,$(CURL_HEADERS))
 
 LOCAL_SHARED_LIBRARIES := libssl libcrypto
 
-LOCAL_LDLIBS := -L$(TARGET_OUT) -lz -lssl -lcrypto
+LOCAL_LDLIBS := -L$(TARGET_OUT) -lz -lssl -lcrypto -fuse-ld=bfd
 
 ifeq ($(TARGET_ARCH_ABI),armeabi)
 LOCAL_MODULE := curl_no_neon
